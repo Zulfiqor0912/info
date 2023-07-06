@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#010F2B"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/programLan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dasturlash tillari"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@raw/string_style"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnInfo" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnInfo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#010F2B"
+            android:paddingHorizontal="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cPlusPlus"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7.5dp"
+                android:background="@drawable/programming"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toTopOf="@id/python"
+                app:layout_constraintEnd_toStartOf="@id/java"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCplusplus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/cplusplus"
+                app:layout_constraintBottom_toBottomOf="@id/cPlusPlus"
+                app:layout_constraintEnd_toEndOf="@id/cPlusPlus"
+                app:layout_constraintStart_toStartOf="@id/cPlusPlus"
+                app:layout_constraintTop_toTopOf="@id/cPlusPlus"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C++"
+                android:fontFamily="@raw/string_style"
+                android:textColor="@color/langColor"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/cPlusPlus"
+                app:layout_constraintEnd_toEndOf="@id/cPlusPlus"
+                app:layout_constraintStart_toStartOf="@id/cPlusPlus"
+                app:layout_constraintTop_toBottomOf="@id/imgCplusplus" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/java"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toBottomOf="@id/cPlusPlus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cPlusPlus"
+                app:layout_constraintTop_toTopOf="@id/cPlusPlus">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgJava"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/java"
+                app:layout_constraintBottom_toBottomOf="@id/java"
+                app:layout_constraintEnd_toEndOf="@id/java"
+                app:layout_constraintStart_toStartOf="@id/java"
+                app:layout_constraintTop_toTopOf="@id/java"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java"
+                android:fontFamily="@raw/string_style"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/java"
+                app:layout_constraintEnd_toEndOf="@id/java"
+                app:layout_constraintStart_toStartOf="@id/java"
+                app:layout_constraintTop_toBottomOf="@id/imgJava" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/python"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toTopOf="@id/cSharp"
+                app:layout_constraintEnd_toStartOf="@id/javaScript"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cPlusPlus">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPython"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/python"
+                app:layout_constraintBottom_toBottomOf="@id/python"
+                app:layout_constraintEnd_toEndOf="@id/python"
+                app:layout_constraintStart_toStartOf="@id/python"
+                app:layout_constraintTop_toTopOf="@id/python"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"
+                android:fontFamily="@raw/string_style"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/python"
+                app:layout_constraintEnd_toEndOf="@id/python"
+                app:layout_constraintStart_toStartOf="@id/python"
+                app:layout_constraintTop_toBottomOf="@id/imgPython" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/html"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toBottomOf="@id/cSharp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cSharp"
+                app:layout_constraintTop_toTopOf="@id/cSharp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHTML"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/html"
+                app:layout_constraintBottom_toBottomOf="@id/html"
+                app:layout_constraintEnd_toEndOf="@id/html"
+                app:layout_constraintStart_toStartOf="@id/html"
+                app:layout_constraintTop_toTopOf="@id/html"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HTML"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                android:fontFamily="@raw/string_style"
+                app:layout_constraintBottom_toBottomOf="@id/html"
+                app:layout_constraintEnd_toEndOf="@id/html"
+                app:layout_constraintStart_toStartOf="@id/html"
+                app:layout_constraintTop_toBottomOf="@id/imgHTML" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cSharp"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toTopOf="@id/kotlin"
+                app:layout_constraintEnd_toStartOf="@id/html"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/python">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCsharp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/c"
+                app:layout_constraintBottom_toBottomOf="@id/cSharp"
+                app:layout_constraintEnd_toEndOf="@id/cSharp"
+                app:layout_constraintStart_toStartOf="@id/cSharp"
+                app:layout_constraintTop_toTopOf="@id/cSharp"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C#"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                android:fontFamily="@raw/string_style"
+                app:layout_constraintBottom_toBottomOf="@id/cSharp"
+                app:layout_constraintEnd_toEndOf="@id/cSharp"
+                app:layout_constraintStart_toStartOf="@id/cSharp"
+                app:layout_constraintTop_toBottomOf="@id/imgCsharp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/javaScript"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toBottomOf="@id/python"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/python"
+                app:layout_constraintTop_toTopOf="@id/python">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgJS"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/javascript"
+                app:layout_constraintBottom_toBottomOf="@id/javaScript"
+                app:layout_constraintEnd_toEndOf="@id/javaScript"
+                app:layout_constraintStart_toStartOf="@id/javaScript"
+                app:layout_constraintTop_toTopOf="@id/javaScript"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JavaScript"
+                android:fontFamily="@raw/string_style"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/javaScript"
+                app:layout_constraintEnd_toEndOf="@id/javaScript"
+                app:layout_constraintStart_toStartOf="@id/javaScript"
+                app:layout_constraintTop_toBottomOf="@id/imgJS" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/kotlin"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/programming"
+                app:layout_constraintEnd_toStartOf="@id/go"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cSharp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgKotlin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/kotlin"
+                app:layout_constraintBottom_toBottomOf="@id/kotlin"
+                app:layout_constraintEnd_toEndOf="@id/kotlin"
+                app:layout_constraintStart_toStartOf="@id/kotlin"
+                app:layout_constraintTop_toTopOf="@id/kotlin"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kotlin"
+                android:textColor="@color/langColor"
+                android:fontFamily="@raw/string_style"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/kotlin"
+                app:layout_constraintEnd_toEndOf="@id/kotlin"
+                app:layout_constraintStart_toStartOf="@id/kotlin"
+                app:layout_constraintTop_toBottomOf="@id/imgKotlin" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/go"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toBottomOf="@id/kotlin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/kotlin"
+                app:layout_constraintTop_toTopOf="@id/kotlin">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgGo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/go"
+                app:layout_constraintBottom_toBottomOf="@id/go"
+                app:layout_constraintEnd_toEndOf="@id/go"
+                app:layout_constraintStart_toStartOf="@id/go"
+                app:layout_constraintTop_toTopOf="@id/go"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go"
+                android:fontFamily="@raw/string_style"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/go"
+                app:layout_constraintEnd_toEndOf="@id/go"
+                app:layout_constraintStart_toStartOf="@id/go"
+                app:layout_constraintTop_toBottomOf="@id/imgGo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/css"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7.5dp"
+                android:background="@drawable/programming"
+                app:layout_constraintEnd_toEndOf="@+id/kotlin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kotlin">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCss"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/css"
+                app:layout_constraintBottom_toBottomOf="@id/css"
+                app:layout_constraintEnd_toEndOf="@id/css"
+                app:layout_constraintStart_toStartOf="@id/css"
+                app:layout_constraintTop_toTopOf="@id/css"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSS"
+                android:textColor="@color/langColor"
+                android:textSize="20sp"
+                android:fontFamily="@raw/string_style"
+                app:layout_constraintBottom_toBottomOf="@id/css"
+                app:layout_constraintEnd_toEndOf="@id/css"
+                app:layout_constraintStart_toStartOf="@id/css"
+                app:layout_constraintTop_toBottomOf="@id/imgCss" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/swift"
+                android:layout_width="0dp"
+                android:layout_height="164dp"
+                android:background="@drawable/programming"
+                app:layout_constraintBottom_toBottomOf="@id/css"
+                app:layout_constraintEnd_toEndOf="@id/go"
+                app:layout_constraintStart_toStartOf="@id/go"
+                app:layout_constraintTop_toTopOf="@id/css">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSwift"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/swift"
+                app:layout_constraintBottom_toBottomOf="@id/swift"
+                app:layout_constraintEnd_toEndOf="@id/swift"
+                app:layout_constraintStart_toStartOf="@id/swift"
+                app:layout_constraintTop_toTopOf="@id/swift"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swift"
+                android:textColor="@color/langColor"
+                android:fontFamily="@raw/string_style"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/swift"
+                app:layout_constraintEnd_toEndOf="@id/swift"
+                app:layout_constraintStart_toStartOf="@id/swift"
+                app:layout_constraintTop_toBottomOf="@id/imgSwift" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
